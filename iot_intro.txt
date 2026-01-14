@@ -1,0 +1,1 @@
+Internet of Things (IoT) refers to a network of physical devices such as sensors, machines, and everyday objects that are connected to the internet. These devices collect and share data to improve efficiency, automation, and decision-making in various applications like smart homes, healthcare, and industry.
