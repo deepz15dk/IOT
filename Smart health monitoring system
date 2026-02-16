@@ -1,0 +1,52 @@
+import random
+import time
+
+def generate_health_data():
+    bpm = random.randint(50, 150)
+    temp_f = round(random.uniform(97.0, 103.0), 1)
+    return bpm, temp_f
+
+while True:
+    print("\nPython Smart Health Monitoring System")
+    print("1. Add Component")
+    print("2. View All Components")
+    print("3. Monitor Usability")
+    print("4. Exit Module")
+
+    choice = input("Enter your choice (1-4): ")
+
+    if choice == "3":
+        print("Monitoring component usability...")
+        bpm, temp = generate_health_data()
+
+        print("Heart Rate (BPM):", bpm)
+        print("Temperature:", temp, "°F")
+
+        if 60 <= bpm <= 100:
+            print("Heart rate is normal")
+        else:
+            print("*** EMERGENCY ALERT ***")
+            print("Call: 911 for immediate assistance")
+
+    elif choice == "2":
+        bpm, temp = generate_health_data()
+        print("Heart Rate (BPM):", bpm)
+        print("Temperature:", temp, "°F")
+
+        if bpm < 60 or bpm > 120:
+            print("*** EMERGENCY ALERT ***")
+            print("Call: 911 for immediate assistance")
+        else:
+            print("Heart rate is normal")
+
+    elif choice == "1":
+        print("Component added successfully.")
+
+    elif choice == "4":
+        print("Exiting the system...")
+        break
+
+    else:
+        print("Invalid choice!")
+
+    time.sleep(1)
